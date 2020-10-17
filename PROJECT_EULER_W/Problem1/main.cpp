@@ -10,6 +10,7 @@ int Problem1( int num ) {
 }
 
 int main( ) {
+  // Плохое решение
   //  int summ = 0;
   //  for ( int i = 3; i < 1000; ++i ) {
   //    if ( !( i % 3 ) || !( i % 5 ) ) summ += i;
