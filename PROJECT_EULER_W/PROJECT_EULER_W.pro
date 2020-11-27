@@ -2,4 +2,6 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
 	Problem1 \
-	Problem2
+	Problem2 \
+	Problem3 \
+	Problem4
