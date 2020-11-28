@@ -7,14 +7,25 @@ long gnd( long a, long b );
 
 int main( ) { std::cout << creatNum( 2520, 20 ); }
 
+// int main( ) {
+//  int a = 2520, b = 1, x;
+//  for ( x = 10; x < 21; x++ ) {
+//    b = a;
+//    while ( a % x != 0 ) {
+//      a += b;
+//    }
+//  }
+//  std::cout << a;
+//  return 0;
+//}
+
+//ааа взял сразу из условия задачи число гаратированно делящееся с 1-10 и доделал до 20
+
 long creatNum( long start, long delimost ) {
   long starDelimost = 11;
   while ( starDelimost <= delimost ) {
     if ( start % starDelimost ) {
-      if ( starDelimost % 2 )
-        start *= starDelimost;
-      else
-        start *= 2;
+      start *= starDelimost % 2 ? starDelimost : 2;
     }
     ++starDelimost;
   }
