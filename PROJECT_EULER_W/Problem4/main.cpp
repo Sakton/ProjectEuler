@@ -15,14 +15,20 @@ int main( ) {
 }
 
 long palindrom( ) {
-  long start = 99;
-  long stopt = 99;
-  while ( !palindromValidate( stopt * start ) ) {
-    --stopt;
-    //--start;
+  long pal = 0;
+  long start = 0;
+  long stop = 0;
+  for ( long i = 100; i <= 999; ++i ) {
+    for ( long j = 100; j <= 999; ++j ) {
+      if ( palindromValidate( i * j ) ) {
+        pal = std::max( i * j, pal );
+        start = i;
+        stop = j;
+      }
+    }
   }
-  std::cout << " start = " << start << " stop = " << stopt << std::endl;
-  return stopt * start;
+  std::cout << " start = " << start << " stop = " << stop << std::endl;
+  return pal;
 }
 
 bool palindromValidate( long num ) {
